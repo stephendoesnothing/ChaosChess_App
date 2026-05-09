@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "A chaotic rule-bending chess variant.",
   "scripts": {
-    "deploy": "gh-pages-deploy"
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
-    "gh-pages-deploy": "^1.0.0"
+    "gh-pages": "^6.1.0"
   },
   "author": "DraftMaster",
   "license": "MIT"
