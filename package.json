@@ -1,0 +1,19 @@
+{
+  "name": "chaos-chess-app",
+  "version": "1.0.0",
+  "description": "A chaotic rule-bending chess variant.",
+  "scripts": {
+    "deploy": "gh-pages -d ."
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.0"
+  },
+  "author": "DraftMaster",
+  "license": "MIT",
+  "gh-pages": {
+    "user": {
+      "name": "GitHub Actions",
+      "email": "actions@github.com"
+    }
+  }
+}
