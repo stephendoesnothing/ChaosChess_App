@@ -2,12 +2,10 @@ name: Deploy Chaos Chess
 
 on:
   push:
-    branches: ["main"] # Runs whenever you commit/push to the main branch
+    branches: ["main"]
 
-# 🚀 Add this block below 🚀
 permissions:
-  contents: write # Grants the GITHUB_TOKEN write access to push changes
-# 🚀 Add this block above 🚀
+  contents: write 
 
 jobs:
   build-and-deploy:
@@ -24,10 +22,10 @@ jobs:
 
       - name: Install and Deploy 🚀
         run: |
-          # 1. Configure Git Identity on build runner
+          # 1. Configure Git Identity (The ID Badge)
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
 
-          # 2. Proceed with install and deploy
+          # 2. Proceed with install and deploy (Using the Permissions)
           npm install
           npm run deploy
