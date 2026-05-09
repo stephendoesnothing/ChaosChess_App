@@ -4,6 +4,7 @@ on:
   push:
     branches: ["main"]
 
+# The permission slip
 permissions:
   contents: write 
 
@@ -15,17 +16,9 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
 
-      - name: Setup Node.js ⚙️
-        uses: actions/setup-node@v4
+      # We replaced the complicated Node/npm setup with a single, dedicated deploy tool
+      - name: Deploy to GitHub Pages 🚀
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          node-version: 20
-
-      - name: Install and Deploy 🚀
-        run: |
-          # 1. Configure Git Identity (The ID Badge)
-          git config --global user.email "actions@github.com"
-          git config --global user.name "GitHub Actions"
-
-          # 2. Proceed with install and deploy (Using the Permissions)
-          npm install
-          npm run deploy
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
