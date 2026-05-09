@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A chaotic rule-bending chess variant.",
   "scripts": {
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d ."
   },
   "devDependencies": {
     "gh-pages": "^6.1.0"
