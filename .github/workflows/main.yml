@@ -2,10 +2,12 @@ name: Deploy Chaos Chess
 
 on:
   push:
-    branches: ["main"] 
+    branches: ["main"] # Runs whenever you commit/push to the main branch
 
+# 🚀 Add this block below 🚀
 permissions:
-  contents: write
+  contents: write # Grants the GITHUB_TOKEN write access to push changes
+# 🚀 Add this block above 🚀
 
 jobs:
   build-and-deploy:
